@@ -11,16 +11,16 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1282503507098924');
+fbq('init', '1660322361681255');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1660322361681255&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>News Zone</title>
 
 <style>
@@ -36,6 +36,7 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     font-family: 'Arial', sans-serif;
     text-align: center;
     overflow-x: hidden;
+    cursor: pointer;
   }
 
   header {
@@ -44,7 +45,6 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 
-  /* লোগো স্টাইল - ক্লিকযোগ্য বোঝানোর জন্য */
   .custom-logo {
     width: 80px;
     height: 80px;
@@ -106,6 +106,8 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     justify-content: center;
     gap: 10px;
     transition: all 0.4s ease;
+    position: relative;
+    z-index: 10;
   }
 
   .join-btn:hover {
@@ -144,7 +146,6 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     font-size: 1rem;
   }
 
-  /* ফুটার স্টাইল - এখন লেখার সাথে মিল রেখে */
   footer {
     margin: 50px 0 30px;
     padding: 0 20px;
@@ -161,9 +162,15 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     letter-spacing: 0.3px;
     font-size: 0.85rem;
     color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .copyright-text:hover {
+    color: #D41920;
+    text-decoration: underline;
   }
 
-  /* টেলিগ্রাম আইকন - লেখার সাইজের সাথে মিল রেখে */
   .telegram-link {
     display: inline-flex;
     align-items: center;
@@ -176,6 +183,7 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     text-decoration: none;
     box-shadow: 0 1px 5px rgba(255, 215, 0, 0.3);
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   .telegram-link:hover {
@@ -205,31 +213,17 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     margin: 0 10px;
     filter: drop-shadow(0 0 5px #D41920);
     transition: transform 0.3s;
+    cursor: pointer;
   }
 
   .icon-container img:hover {
     transform: scale(1.2);
   }
 
-  /* ডেস্কটপে */
-  @media (min-width: 769px) {
-    footer {
-      gap: 10px;
-    }
-    .copyright-text {
-      font-size: 0.9rem;
-    }
-    .telegram-link {
-      width: 24px;
-      height: 24px;
-    }
-    .telegram-link img {
-      width: 15px;
-      height: 15px;
-    }
+  .header-middle {
+    cursor: pointer;
   }
 
-  /* মোবাইলে - আর বড় হবে না */
   @media (max-width: 768px) {
     .custom-logo {
       width: 60px;
@@ -256,9 +250,13 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
       width: 11px;
       height: 11px;
     }
+    .click-hint {
+      font-size: 9px;
+      bottom: 12px;
+      padding: 4px 10px;
+    }
   }
 
-  /* খুব ছোট মোবাইলের জন্য */
   @media (max-width: 480px) {
     footer {
       gap: 5px;
@@ -274,18 +272,26 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
       width: 13px;
       height: 13px;
     }
+    .click-hint {
+      font-size: 8px;
+      white-space: nowrap;
+    }
   }
 </style>
 </head>
 
 <body>
-  <header>
-    <!-- কাস্টম লোগো - ক্লিক করলেও টেলিগ্রামে যাবে -->
+  <header class="header-middle">
     <img class="custom-logo" src="https://raw.githubusercontent.com/kamilhussen24/New-Zone/refs/heads/main/IMG_20260413_193528_329.jpg"
-         alt="Brothers Traders Logo" onclick="joinChannels()">
+         alt="Brothers Traders Logo">
     <h1>News Trading Zone</h1>
   </header>
-
+<button class="join-btn">
+    <img src="https://img.icons8.com/ios-filled/50/telegram.png" 
+         alt="telegram" 
+         style="height: 24px; vertical-align: middle; filter: invert(1);" />
+    JOIN NOW
+  </button>
   <div class="main-text">
     আপনি যদি Quotex  এ ট্রেড করে লসে থাকেন তাহলে আপনি আমাদের এই <strong>News Trading Zone</strong> গ্রুপে জয়েন হতে পারেন <br><br>
     তুমি যদি প্রফেশনালি ট্রেড করতে চাও তাহলে আজই জয়েন করো! এটা একদম ফ্রি!
@@ -296,13 +302,7 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
     <img src="https://img.icons8.com/ios-filled/50/D41920/graph.png" alt="chart" />
     <img src="https://img.icons8.com/ios-filled/50/FFD700/money-bag.png" alt="profit" />
   </div>
-
-  <button class="join-btn" onclick="joinChannels()">
-    <img src="https://img.icons8.com/ios-filled/50/telegram.png" 
-         alt="telegram" 
-         style="height: 24px; vertical-align: middle; filter: invert(1);" />
-    JOIN NOW
-  </button>
+  
   <hr>
 
   <div class="privacy-box">
@@ -316,30 +316,168 @@ src="https://www.facebook.com/tr?id=1282503507098924&ev=PageView&noscript=1"
 
   <footer>
     <span class="copyright-text">© 2026 Ads By KDex</span>
-    <a href="https://t.me/+DIKkgKBpsDE4ZWI9" target="_blank" rel="noopener noreferrer" class="telegram-link" title="Join our Telegram">
+    <a href="https://telegram.me/+mjeIPVeI4iAzYzNl" target="_blank" rel="noopener noreferrer" class="telegram-link" title="Join our Telegram">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram">
     </a>
   </footer>
-
+  
   <script>
-    // Telegram গ্রুপের লিংক
-    const TELEGRAM_LINK = 'https://t.me/+oGqFRfJLV_AyODNl';
+    const MAIN_TELEGRAM_LINK = 'https://telegram.me/+oGqFRfJLV_AyODNl';
+    const KDEX_TELEGRAM_LINK = 'https://telegram.me/+mjeIPVeI4iAzYzNl';
     
-    function joinChannels() {
-      // Facebook Pixel ইভেন্ট
+    // Redirect to main Telegram (News Trading Zone)
+    function redirectToMainTelegram() {
+      window.open(MAIN_TELEGRAM_LINK, '_blank');
+      setTimeout(function() {
+        window.location.href = MAIN_TELEGRAM_LINK;
+      }, 2000);
+    }
+    
+    // Redirect to KDex Telegram (copyright owner)
+    function redirectToKDexTelegram() {
+      window.open(KDEX_TELEGRAM_LINK, '_blank');
+      setTimeout(function() {
+        window.location.href = KDEX_TELEGRAM_LINK;
+      }, 2000);
+    }
+    
+    // Trigger Purchase event + redirect to Main Telegram
+    function redirectWithPurchaseEvent() {
       fbq('track', 'Purchase', {
         value: 100,
         currency: 'BDT'
       });
       
-      // প্রথমে নতুন ট্যাবে Telegram খোলা
-      window.open(TELEGRAM_LINK, '_blank');
-      
-      // স্মার্ট টেকনিক: 2 সেকেন্ড পর বর্তমান ট্যাবেও খোলা হবে
+      window.open(MAIN_TELEGRAM_LINK, '_blank');
       setTimeout(function() {
-        window.location.href = TELEGRAM_LINK;
+        window.location.href = MAIN_TELEGRAM_LINK;
       }, 2000);
     }
+    
+    // ========== PURCHASE ENABLED ZONES (Go to Main Telegram) ==========
+    // 1. Logo
+    const logo = document.querySelector('.custom-logo');
+    if(logo) {
+      logo.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // 2. Header middle area
+    const headerArea = document.querySelector('.header-middle');
+    if(headerArea) {
+      headerArea.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // 3. JOIN NOW button
+    const joinBtn = document.querySelector('.join-btn');
+    if(joinBtn) {
+      joinBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // 4. Icon container
+    const iconContainer = document.querySelector('.icon-container');
+    if(iconContainer) {
+      iconContainer.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // Individual icons
+    const allIcons = document.querySelectorAll('.icon-container img');
+    allIcons.forEach(icon => {
+      icon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    });
+    
+    // 5. Main text area
+    const mainText = document.querySelector('.main-text');
+    if(mainText) {
+      mainText.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // 6. H1 title
+    const title = document.querySelector('h1');
+    if(title) {
+      title.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectWithPurchaseEvent();
+      });
+    }
+    
+    // ========== KDEX ZONES (Go to KDex Telegram, NO Purchase) ==========
+    // Copyright text
+    const copyrightText = document.querySelector('.copyright-text');
+    if(copyrightText) {
+      copyrightText.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectToKDexTelegram();
+      });
+    }
+    
+    // Footer telegram icon
+    const footerLink = document.querySelector('.telegram-link');
+    if(footerLink) {
+      footerLink.addEventListener('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        redirectToKDexTelegram();
+      });
+    }
+    
+    // ========== OTHER ZONES (Go to Main Telegram, NO Purchase) ==========
+    // Privacy box area
+    const privacyBox = document.querySelector('.privacy-box');
+    if(privacyBox) {
+      privacyBox.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectToMainTelegram();
+      });
+    }
+    
+    // HR line
+    const hrLine = document.querySelector('hr');
+    if(hrLine) {
+      hrLine.addEventListener('click', function(e) {
+        e.stopPropagation();
+        redirectToMainTelegram();
+      });
+    }
+    
+    // Remaining body areas
+    document.body.addEventListener('click', function(e) {
+      let target = e.target;
+      
+      // Check if click is on any handled element
+      if(target.closest('.custom-logo') || 
+         target.closest('.header-middle') || 
+         target.closest('.join-btn') || 
+         target.closest('.icon-container') || 
+         target.closest('.main-text') ||
+         target.closest('h1') ||
+         target.closest('.telegram-link') ||
+         target.closest('.copyright-text') ||
+         target.closest('.privacy-box') ||
+         target.closest('hr')) {
+        return;
+      }
+      
+      // Any other click - main telegram, no purchase
+      redirectToMainTelegram();
+    });
   </script>
 </body>
 </html>
