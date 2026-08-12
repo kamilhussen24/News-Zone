@@ -416,6 +416,11 @@ src="https://www.facebook.com/tr?id=1365625892422223&ev=PageView&noscript=1"
     // Guard against a double-tap firing the event / redirect twice
     let redirecting = false;
 
+    // Reset the guard when the page is restored from bfcache (e.g. user hits back)
+    window.addEventListener('pageshow', function(event) {
+      redirecting = false;
+    });
+
     // Plain redirect, no Purchase event
     function redirectToMainTelegram() {
       if (redirecting) return;
@@ -504,6 +509,6 @@ src="https://www.facebook.com/tr?id=1365625892422223&ev=PageView&noscript=1"
       }
       redirectToMainTelegram();
     });
-  </script>
+</script>
 </body>
 </html>
